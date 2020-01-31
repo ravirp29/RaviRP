@@ -27,7 +27,7 @@ class Header extends Component {
                                     <Link to="/legworkout">Leg Workout</Link>
                                 </li> */}
                                 <li className="nav-item">
-                                    <Link to="/workout_types">workout_type</Link>
+                                    <Link to="/workouttype">workout_type</Link>
                                 </li>
                                 <li className="nav-item">
                                     <a class="nav-link" href="/contact">Contact</a>

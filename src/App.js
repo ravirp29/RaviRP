@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Router, Switch, Route } from 'react-router-dom';
+import { Router, Link, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import Header from './component/header/header';
 import Legworkout from './component/legworkout/legworkout';
@@ -15,16 +15,28 @@ class App extends Component {
     render() {
         return (
             <Router history={history}>
-
-                <Header />
-
-                <Switch>
+                <div>
+                <ul>
+                     <li>
+                     <Link to="/">Home</Link>
+                     </li>
+                     <li>
+                     <Link to="/workouttype">Workout</Link>
+                     </li>
+                     <li>
+                     <Link to="/contact">contact</Link>
+                     </li>
+                     <li>
+                     <Link to="/login">Login</Link>
+                     </li>
+                </ul>
+                    
                     <Route exact path="/" component={Home} />
                     <Route path="/workouttype" component={Workouttype} />
                     <Route path="/contact" component={Contact} />
                     <Route path="/login" component={Login} />
-                </Switch>
-                <Body />
+                    </div>
+               
             </Router>
         );
 
